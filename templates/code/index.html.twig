@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CodeController!{% endblock %}
+
+{% block body %}
+{#    <h1>Promo Code Generator</h1>#}
+{#    <form>#}
+{#        <input type="text" name="amount" placeholder="Amount" />#}
+{#        <input type="text" name="length" placeholder="Length" />#}
+{#    </form>#}
+
+    {{ form(form) }}
+    <br/>
+    {% for code in promoCodes %}
+        <b>{{ code }}</b><br/><br/>
+    {% endfor %}
+
+{% endblock %}
