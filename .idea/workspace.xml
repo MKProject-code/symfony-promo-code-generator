@@ -11,14 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf055166-ca17-42e0-ad7d-12812f5890d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Form/PromoCodeType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/console" beforeDir="false" afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promoCodes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/promoCodes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597597049183</updated>
       <workItem from="1597597050828" duration="3253000" />
-      <workItem from="1597606050681" duration="9401000" />
+      <workItem from="1597606050681" duration="9945000" />
     </task>
     <servers />
   </component>
@@ -198,9 +193,13 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="344" key="SettingsEditor/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597622201070" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1597602678107">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1597623670979">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597602678107" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597623670979" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1597623834093">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597623834093" />
   </component>
 </project>
