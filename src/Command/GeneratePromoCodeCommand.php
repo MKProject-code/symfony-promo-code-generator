@@ -3,6 +3,7 @@
 namespace App\Command;
 
 use App\Repository\PromoCodeRepository;
+use App\Service\PromoCodeGenerator;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -18,14 +19,15 @@ class GeneratePromoCodeCommand extends Command
      * @var PromoCodeRepository
      */
     private $promoCodeRepository;
-
     /**
-     * PromoCodeController constructor.
-     * @param PromoCodeRepository $promoCodeRepository
+     * @var PromoCodeGenerator
      */
-    public function __construct(PromoCodeRepository $promoCodeRepository)
+    private $promoCodeGenerator;
+
+    public function __construct(PromoCodeRepository $promoCodeRepository, PromoCodeGenerator $promoCodeGenerator)
     {
         $this->promoCodeRepository = $promoCodeRepository;
+        $this->promoCodeGenerator = $promoCodeGenerator;
         parent::__construct();
     }
 
@@ -61,12 +63,9 @@ class GeneratePromoCodeCommand extends Command
 
         $alphanumeric = $input->getOption('alphanumeric');
 
-        $promoCodesArray = [];
-        for ($i = 0; $i < $amount; $i++) {
-            $promoCodesArray[] = $this->promoCodeRepository->generateRandomCodes($alphanumeric, $length);
-        }
+        $promoCodesArray = $this->promoCodeGenerator->generateRandomCodes($alphanumeric, $length, $amount);
 
-        $this->promoCodeRepository->saveGeneratedCodes($promoCodesArray);
+        $this->promoCodeRepository->save($promoCodesArray);
 
         $io->success(sprintf('Successfully generated %d %s promo codes of length %d.', $amount, $alphanumeric ? 'alphanumeric' : 'numeric', $length));
         return 0;

@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\PromoCodeControllerRepository;
+use App\Repository\PromoCodeRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=PromoCodeControllerRepository::class)
+ * @ORM\Entity(repositoryClass=PromoCodeRepository::class)
  */
-class PromoCodeEntity
+class PromoCode
 {
     /**
      * @ORM\Id()

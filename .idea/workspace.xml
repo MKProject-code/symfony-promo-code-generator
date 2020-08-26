@@ -10,10 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf055166-ca17-42e0-ad7d-12812f5890d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="bf055166-ca17-42e0-ad7d-12812f5890d4" name="Default Changelist" comment="add README.md">
+      <change afterPath="$PROJECT_DIR$/src/Service/PromoCodeGenerator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/promoCodes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/promoCodes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promoCodes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/GeneratePromoCodeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/GeneratePromoCodeCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PromoCodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PromoCodeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/PromoCodeEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PromoCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PromoCodeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PromoCodeRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +146,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Mas-Moro/Sklepowi/Back End/project-alfa" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
@@ -154,8 +160,18 @@
       <option name="presentableId" value="Default" />
       <updated>1597597049183</updated>
       <workItem from="1597597050828" duration="3253000" />
-      <workItem from="1597606050681" duration="9945000" />
+      <workItem from="1597606050681" duration="10923000" />
+      <workItem from="1597670081447" duration="1415000" />
+      <workItem from="1598483270974" duration="2827000" />
     </task>
+    <task id="LOCAL-00001" summary="add README.md">
+      <created>1597624013085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597624013085</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,20 +187,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="add README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="906" y="378" key="#Inspections" timestamp="1597612330069">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="906" y="378" key="#Inspections/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597612330069" />
-    <state x="981" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597612156224">
+    <state x="1007" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598483507880">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="981" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597612156224" />
-    <state x="1010" y="454" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597620101637">
+    <state x="1007" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598483507880" />
+    <state x="981" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598484228984">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1010" y="454" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597620101637" />
+    <state x="981" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598484228984" />
+    <state x="1010" y="454" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598484516563">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="454" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598484516563" />
     <state x="1060" y="454" key="FileChooserDialogImpl" timestamp="1597612198720">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -193,13 +218,25 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="344" key="SettingsEditor/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597622201070" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1597623670979">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1597671040443">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597623670979" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1597623834093">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597671040443" />
+    <state x="889" y="325" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598483921010">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597623834093" />
+    <state x="889" y="325" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598483921010" />
+    <state x="975" y="507" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1598483851278">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="975" y="507" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598483851278" />
+    <state x="921" y="430" width="700" height="530" key="recent.locations.popup" timestamp="1598483905875">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="921" y="430" width="700" height="530" key="recent.locations.popup/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598483905875" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1598483908712">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598483908712" />
   </component>
 </project>

@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\PromoCodeEntity;
+use App\Entity\PromoCode;
 use App\Form\PromoCodeType;
 use App\Repository\PromoCodeRepository;
+use App\Service\PromoCodeGenerator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,16 +14,21 @@ use Symfony\Component\Routing\Annotation\Route;
 class PromoCodeController extends AbstractController
 {
     /**
+     * @var PromoCodeGenerator
+     */
+    private $promoCodeGenerator;
+    /**
      * @var PromoCodeRepository
      */
     private $promoCodeRepository;
 
     /**
      * PromoCodeController constructor.
-     * @param PromoCodeRepository $promoCodeRepository
+     * @param PromoCodeGenerator $promoCodeGenerator
      */
-    public function __construct(PromoCodeRepository $promoCodeRepository)
+    public function __construct(PromoCodeGenerator $promoCodeGenerator, PromoCodeRepository $promoCodeRepository)
     {
+        $this->promoCodeGenerator = $promoCodeGenerator;
         $this->promoCodeRepository = $promoCodeRepository;
     }
 
@@ -33,7 +39,7 @@ class PromoCodeController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        $promoCode = new PromoCodeEntity();
+        $promoCode = new PromoCode();
 
         $form = $this->createForm(PromoCodeType::class, $promoCode);
 
@@ -44,10 +50,9 @@ class PromoCodeController extends AbstractController
             $amount = $form->get('amount')->getData();
             $alphanumeric = $form->get('type')->getData();
 
-            $promoCodesArray = [];
-            for ($i = 0; $i < $amount; $i++) {
-                $promoCodesArray[] = $this->promoCodeRepository->generateRandomCodes($alphanumeric, $length);
-            }
+            $promoCodesArray = $this->promoCodeGenerator->generateRandomCodes($alphanumeric, $length, $amount);
+
+            $this->promoCodeRepository->save($promoCodesArray);
 
             return $this->render('code/index.html.twig', [
                 'form' => $form->createView(),

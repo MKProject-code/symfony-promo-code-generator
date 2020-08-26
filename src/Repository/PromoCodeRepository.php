@@ -2,48 +2,46 @@
 
 namespace App\Repository;
 
-use App\Entity\PromoCodeEntity;
+use App\Entity\PromoCode;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method PromoCodeEntity|null find($id, $lockMode = null, $lockVersion = null)
- * @method PromoCodeEntity|null findOneBy(array $criteria, array $orderBy = null)
- * @method PromoCodeEntity[]    findAll()
- * @method PromoCodeEntity[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method PromoCode|null find($id, $lockMode = null, $lockVersion = null)
+ * @method PromoCode|null findOneBy(array $criteria, array $orderBy = null)
+ * @method PromoCode[]    findAll()
+ * @method PromoCode[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class PromoCodeRepository extends ServiceEntityRepository
 {
     /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
+
+    /**
      * PromoCodeRepository constructor.
      * @param ManagerRegistry $registry
+     * @param EntityManagerInterface $entityManager
      */
-    public function __construct(ManagerRegistry $registry)
+    public function __construct(ManagerRegistry $registry, EntityManagerInterface $entityManager)
     {
-        parent::__construct($registry, PromoCodeEntity::class);
+        parent::__construct($registry, PromoCode::class);
+        $this->entityManager = $entityManager;
     }
 
     /**
-     * @param bool $alphanumeric
-     * @param int $length
-     * @return string
+     * @param array $promoCodes
      */
-    public function generateRandomCodes($alphanumeric = true, $length = 10): string
+    public function save(array $promoCodes): void
     {
-        $characters = $alphanumeric ? '0123456789ABCDEFGHILKMNOPQRSTUVWXYZ' : '0123456789';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        foreach($promoCodes as $code) {
+            $promoCodeEntity = new PromoCode();
+            $promoCodeEntity->setCode($code);
+            $this->entityManager->persist($promoCodeEntity);
         }
-        return $randomString;
-    }
-
-    /**
-     * @param array $promoCodesArray
-     */
-    public function saveGeneratedCodes(array $promoCodesArray): void
-    {
-        file_put_contents('promoCodes.txt', implode("\n", $promoCodesArray)); //overwrite file!
+        $this->entityManager->flush();
     }
 }
