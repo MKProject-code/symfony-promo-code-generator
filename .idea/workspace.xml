@@ -10,15 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf055166-ca17-42e0-ad7d-12812f5890d4" name="Default Changelist" comment="add README.md">
-      <change afterPath="$PROJECT_DIR$/src/Service/PromoCodeGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="bf055166-ca17-42e0-ad7d-12812f5890d4" name="Default Changelist" comment="add sql support">
+      <change afterPath="$PROJECT_DIR$/tests/Service/PromoCodeGeneratorTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/promoCodes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/GeneratePromoCodeCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/GeneratePromoCodeCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PromoCodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PromoCodeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/PromoCodeEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/PromoCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PromoCodeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PromoCodeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/PromoCodeGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PromoCodeGenerator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +159,7 @@
       <workItem from="1597597050828" duration="3253000" />
       <workItem from="1597606050681" duration="10923000" />
       <workItem from="1597670081447" duration="1415000" />
-      <workItem from="1598483270974" duration="2827000" />
+      <workItem from="1598483270974" duration="6202000" />
     </task>
     <task id="LOCAL-00001" summary="add README.md">
       <created>1597624013085</created>
@@ -171,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597624013085</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add sql support">
+      <created>1598486170267</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598486170267</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +195,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="add README.md" />
+    <MESSAGE value="add sql support" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sql support" />
   </component>
   <component name="WindowStateProjectService">
     <state x="906" y="378" key="#Inspections" timestamp="1597612330069">
@@ -214,22 +219,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="454" key="FileChooserDialogImpl/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597612198720" />
+    <state x="248" y="122" key="MergeDialog" timestamp="1598486234274">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="248" y="122" key="MergeDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598486234274" />
+    <state x="918" y="461" key="MultipleFileMergeDialog" timestamp="1598486234281">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="918" y="461" key="MultipleFileMergeDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598486234281" />
     <state x="781" y="344" key="SettingsEditor" timestamp="1597622201070">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="344" key="SettingsEditor/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597622201070" />
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1597671040443">
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2" timestamp="1598486279525">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1597671040443" />
+    <state x="872" y="432" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598486279525" />
     <state x="889" y="325" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598483921010">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="889" y="325" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598483921010" />
-    <state x="975" y="507" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1598483851278">
+    <state x="975" y="507" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1598486431212">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="975" y="507" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598483851278" />
+    <state x="975" y="507" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.2560.1400/2560.317.1680.1010@0.0.2560.1400" timestamp="1598486431212" />
     <state x="921" y="430" width="700" height="530" key="recent.locations.popup" timestamp="1598483905875">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
