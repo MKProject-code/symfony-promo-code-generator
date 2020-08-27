@@ -1,16 +1,35 @@
+# Description
+
+This is a simple promotional code generator written in PHP - Symfony framework.
+You can generate code from WEB page or console command.
+The generated codes save to database.
+
 # Run server
 
 `symfony server:start`
 
+# Test
+
+#### Windows
+`php bin\phpunit`
+
+#### Linux
+`./bin/phpunit`
+
 # Promo codes generator
 
-### From browser:
+### From browser
 
 `https://127.0.0.1:8000/code`
 
-### From console:
+### From console
 
-`generate-promo-codes [-a|--alphanumeric] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-e|--env ENV] [--no-debug] [--] <command> <length> <amount>`
+#### Windows
+`php bin\console generate-promo-codes [-a|--alphanumeric] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-e|--env ENV] [--no-debug] [--] <command> <length> <amount>`
+
+#### Linux
+`./bin/console generate-promo-codes [-a|--alphanumeric] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--ansi] [--no-ansi] [-n|--no-interaction] [-e|--env ENV] [--no-debug] [--] <command> <length> <amount>`
+
 ```
 Description:
   Generate promo codes and save them to file
