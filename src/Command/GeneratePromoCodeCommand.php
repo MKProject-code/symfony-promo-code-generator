@@ -24,6 +24,11 @@ class GeneratePromoCodeCommand extends Command
      */
     private $promoCodeGenerator;
 
+    /**
+     * GeneratePromoCodeCommand constructor.
+     * @param PromoCodeRepository $promoCodeRepository
+     * @param PromoCodeGenerator $promoCodeGenerator
+     */
     public function __construct(PromoCodeRepository $promoCodeRepository, PromoCodeGenerator $promoCodeGenerator)
     {
         $this->promoCodeRepository = $promoCodeRepository;
