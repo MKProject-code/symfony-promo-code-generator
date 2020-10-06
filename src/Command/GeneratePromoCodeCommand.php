@@ -70,7 +70,14 @@ class GeneratePromoCodeCommand extends Command
 
         $promoCodesArray = $this->promoCodeGenerator->generateRandomCodes($alphanumeric, $length, $amount);
 
-        $this->promoCodeRepository->save($promoCodesArray);
+        $promoCodeEntities = [];
+        foreach($promoCodesArray as $code) {
+            $promoCodeEntity = new PromoCode();
+            $promoCodeEntity->setCode($code);
+            $promoCodeEntities[] = $promoCodeEntity;
+        }
+
+        $this->promoCodeRepository->save($promoCodeEntities);
 
         $io->success(sprintf('Successfully generated %d %s promo codes of length %d.', $amount, $alphanumeric ? 'alphanumeric' : 'numeric', $length));
         return 0;
