@@ -52,7 +52,14 @@ class PromoCodeController extends AbstractController
 
             $promoCodesArray = $this->promoCodeGenerator->generateRandomCodes($alphanumeric, $length, $amount);
 
-            $this->promoCodeRepository->save($promoCodesArray);
+            $promoCodeEntities = [];
+            foreach($promoCodesArray as $code) {
+                $promoCodeEntity = new PromoCode();
+                $promoCodeEntity->setCode($code);
+                $promoCodeEntities[] = $promoCodeEntity;
+            }
+            
+            $this->promoCodeRepository->save($promoCodeEntities);
 
             return $this->render('code/index.html.twig', [
                 'form' => $form->createView(),
