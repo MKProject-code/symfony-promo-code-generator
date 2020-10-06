@@ -37,10 +37,8 @@ class PromoCodeRepository extends ServiceEntityRepository
      */
     public function save(array $promoCodes): void
     {
-        foreach($promoCodes as $code) {
-            $promoCodeEntity = new PromoCode();
-            $promoCodeEntity->setCode($code);
-            $this->entityManager->persist($promoCodeEntity);
+        foreach($promoCodes as $promoCode) {
+            $this->entityManager->persist($promoCode);
         }
         $this->entityManager->flush();
     }
